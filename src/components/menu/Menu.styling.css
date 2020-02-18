@@ -1,0 +1,151 @@
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  padding: 5px;
+  display: flex !important;
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s;
+  line-height: 120%;
+  transition: background-color 0.6s ease !important;
+  background-color: transparent;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  transition: background-color 3s ease;
+  background-color: rgba(156, 206, 99, 0.6) !important;
+}
+
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 28px;
+  height: 17px;
+  right: 15px;
+  top: 16px;
+  transition: ease-in-out 1s all;
+}
+
+.bm-item > svg {
+  font-size: 30px;
+}
+
+.menu-header {
+  position: absolute;
+  left: 43%;
+  top: 7px;
+  font-size: 80%;
+}
+
+.bm-icon {
+  width: 39px !important;
+  height: 39px !important;
+  position: relative;
+  left: 0;
+  top: -8px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+  transition: background 0.6s ease-in-out;
+}
+
+.bm-burger-button:not(.menuOpen) .bm-burger-bars {
+  opacity: 0.9 !important;
+}
+
+.bm-burger-button.menuOpen .bm-burger-bars  {
+  opacity: 0.4 !important;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross-button button {
+  border-color: white !important;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 40px 0;
+  font-size: 1.15em;
+  box-shadow: 1px 1px 10px 0px #ffffffb0;
+  background: #373a47;
+  /* #003539; */
+  overflow: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item,
+.menu-item--active {
+  height: 45px;
+  width: 100%;
+}
+
+.menu-item {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: unset !important;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 22px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+/* .one-word-per-line {
+    word-spacing: <parent-width>;
+} */
+
+ @media only screen and (min-width: 401px) {
+   .bm-item {
+     max-width: 290px;
+   }
+
+   .bm-menu-wrap {
+     max-width: 300px;
+   }
+ }
+
+ @media only screen and (max-width: 401px) {
+   .bm-item {
+     max-width: 240px;
+   }
+
+   .bm-menu-wrap {
+     max-width: 250px !important;
+   }
+ }
+
+ .bm-burger-button.menuOpen {
+   transform: rotate(360deg);
+ }

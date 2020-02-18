@@ -1,0 +1,202 @@
+.my-cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: black;
+}
+
+.my-cards > div {
+  width: 100%;
+}
+
+.barn-desktop {
+  width: 80%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  box-shadow: 0 0 3px 0 grey;
+  border-radius: 5px;
+  margin: 20px auto 0;
+}
+
+.barn-mobile {
+  margin-top: 15px;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-center {
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.text-grey {
+  font-weight: 100;
+  color: grey;
+}
+
+.welcome-2 {
+  margin: 10px 0;
+}
+
+/* .MuiListItemIcon-root-273 {
+  background: #eef6f2;
+  border-radius: 100%;
+  padding: 5px;
+} */
+
+.dosDonts {
+  display: flex;
+}
+
+.leftSide,
+.rightSide {
+  width: 100%;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.leftSide {
+  padding-right: 3%;
+}
+
+.rightSide {
+  padding-left: 3%;
+}
+
+.leftSide > ul,
+.rightSide > ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.leftSide > ul > li,
+.rightSide > ul > li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.leftSide > svg,
+.rightSide > svg {
+  align-self: flex-start;
+}
+
+.leftSide {
+  color: #02c38f;
+}
+
+.rightSide {
+  color: #cb5f00;
+}
+
+.leftSide > ul > li > span.text,
+.rightSide > ul > li > span.text {
+  text-align: left;
+}
+
+@media only screen and (min-width: 1000px) {
+  .leftSide > ul > li > span.text,
+  .rightSide > ul > li > span.text {
+    padding-left: 20px;
+  }
+
+  .accomodation-expansion {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .leftSide > ul > li > span.text,
+  .rightSide > ul > li > span.text {
+    padding-left: 10px;
+  }
+
+  .accomodation-expansion {
+    flex-direction: column;
+  }
+
+  .review-img {
+    margin-top: 5px;
+  }
+}
+
+.accomodation-expansion {
+  display: flex;
+  width: 100%;
+}
+
+.accomodation-expansion > .row {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  padding: 5px;
+  text-align: left;
+}
+
+.accomodation-expansion > .row > svg {
+  margin-right: 10px;
+}
+
+.my-cards h2 {
+  font-weight: 400;
+}
+
+.review-img {
+  opacity: 0.8;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+  max-width: 223px;
+  max-height: 57px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  transition: opacity 0.3s;
+}
+
+.review-img:hover {
+  opacity: 0.3;
+}
+
+.directions-expanded svg {
+  font-size: 30px;
+  background-color: #f5f5f5;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 15px;
+}
+
+#contact-mail svg,
+#contact-call svg {
+  font-size: 30px;
+}
+
+#contact-whatsapp img {
+  width: 36px;
+}
+
+#contact-mail svg,
+#contact-call svg,
+#contact-whatsapp img {
+  position: absolute;
+  left: 10px;
+  /* background-color: white;
+  border-radius: 10px; */
+  /* padding: 5px;
+  margin-right: 10px; */
+}
