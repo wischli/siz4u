@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import "./fonts/Exo-Regular.ttf";
 import WebFont from "webfontloader";
 
 WebFont.load({

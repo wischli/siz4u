@@ -8,6 +8,8 @@ import Header from "./components/header/Header";
 import Welcome from "./components/welcome/Welcome";
 // import ContactMe from './components/contact/ContactMe'
 import Datenschutz from "./components/privacy/Datenschutz";
+import MyForm from "./components/Form/Form";
+import MForm from "./components/Form/MForm";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <div className="my-cards">
           <Welcome />
           {/* <ContactMe /> */}
+          <MForm />
+          <MyForm />
           <Datenschutz />
         </div>
       </main>
