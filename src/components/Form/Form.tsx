@@ -19,17 +19,18 @@ function MyForm() {
     e.preventDefault();
     const form = e.target;
     setServerState({ submitting: true, status: null });
-    axios({
-      method: "post",
-      url: "https://formspree.io/mbjavdke",
-      data: new FormData(form),
-    })
-      .then((r) => {
-        handleServerResponse(true, "Thanks!", form);
-      })
-      .catch((r) => {
-        handleServerResponse(false, r.response.data.error, form);
-      });
+    console.log(new FormData(form).getAll("name"));
+    // axios({
+    //   method: "post",
+    //   url: "https://formspree.io/mbjavdke",
+    //   data: new FormData(form),
+    // })
+    //   .then((r) => {
+    //     handleServerResponse(true, "Thanks!", form);
+    //   })
+    //   .catch((r) => {
+    //     handleServerResponse(false, r.response.data.error, form);
+    //   });
   };
   return (
     <div style={{ display: "flex" }}>

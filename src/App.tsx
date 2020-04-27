@@ -8,24 +8,23 @@ import Header from "./components/header/Header";
 import Welcome from "./components/welcome/Welcome";
 // import ContactMe from './components/contact/ContactMe'
 import Datenschutz from "./components/privacy/Datenschutz";
-import MyForm from "./components/Form/Form";
 import MForm from "./components/Form/MForm";
+import { ThemeProvider } from "@material-ui/core";
+import { theme } from "./components/MyTheme/MyTheme";
 
 function App() {
   return (
-    <div id="menuOuterContainer" className="App">
-      <AppBar />
-      <main id="menuPageWrap">
-        <Header />
-        <div className="my-cards">
+    <ThemeProvider theme={theme}>
+      <div id="menuOuterContainer" className="App">
+        <AppBar />
+        <main id="menuPageWrap">
+          <Header />
           <Welcome />
-          {/* <ContactMe /> */}
           <MForm />
-          <MyForm />
           <Datenschutz />
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 
