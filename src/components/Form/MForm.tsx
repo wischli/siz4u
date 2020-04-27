@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import {
@@ -10,6 +10,11 @@ import {
   FormGroup,
   FormHelperText,
 } from "@material-ui/core";
+import { isMobile } from "react-device-detect";
+
+import axios from "axios";
+import myTheme from "../MyTheme/MyTheme";
+
 // import HouseIcon from "@material-ui/icons/House";
 // import DeviceHubIcon from "@material-ui/icons/DeviceHub";
 // import LiveHelpIcon from "@material-ui/icons/LiveHelp";
@@ -44,27 +49,55 @@ const subjects = [
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      paddingTop: isMobile ? 20 : 40,
+      paddingBottom: isMobile ? 20 : 40,
+      paddingLeft: isMobile ? 0 : 40,
+      paddingRight: isMobile ? 0 : 40,
       "& .MuiTextField-root": {
         margin: theme.spacing(1),
         width: "90%",
       },
+      "& .MuiFormControlLabel-label": {
+        lineHeight: isMobile ? "110%" : "auto",
+      },
     },
     buttonRow: {
-      display: "flex",
+      color: "black",
+      display: isMobile ? "block" : "flex",
+      textAlign: isMobile ? "left" : "center",
       width: "90%",
       justifyContent: "space-between",
       margin: "auto",
+      paddingTop: isMobile ? "auto" : 10,
+    },
+    button: {
+      ...myTheme.button,
+      width: isMobile ? "100%" : 400,
+      height: isMobile ? 50 : "auto",
     },
   })
 );
 
 export default function MForm() {
   const classes = useStyles();
-  const [subject, setSubject] = React.useState("Sonstiges");
-  const [email, setEmail] = React.useState(false);
-  const [name, setName] = React.useState(false);
-  const [checkbox, setCheckbox] = React.useState(false);
-  const [button, setButton] = React.useState(false);
+  const [subject, setSubject] = useState("Sonstiges");
+  const [email, setEmail] = useState(false);
+  const [name, setName] = useState(false);
+  const [checkbox, setCheckbox] = useState(false);
+  const [button, setButton] = useState(false); // TODO
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+  });
+  const handleServerResponse = (ok: any, msg: any, form: any) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg } as any,
+    });
+    if (ok) {
+      form.reset();
+    }
+  };
 
   const handleSubjectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSubject(event.target.value);
@@ -81,36 +114,43 @@ export default function MForm() {
     event.persist();
     await sleep(1000);
     setEmail(
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(event?.target?.value)
+      // eslint-disable-next-line no-control-regex
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(
+        event?.target?.value
+      )
     );
   };
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
+  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
     setButton(true);
-    if (!email) {
-      console.log("Email fehlt");
-    }
-    if (!name) {
-      console.log("Name fehlt");
-    }
-    if (!checkbox) {
-      console.log("Bitte stimmen Sie der Zusendung Ihrer Daten zu.");
-    }
+    event.preventDefault();
+    console.log(email, name, checkbox, event.target);
     if (email && name && checkbox) {
-      console.log(true);
+      const form = event.target;
+      setServerState({ submitting: true, status: null });
+      axios({
+        method: "post",
+        url: "https://formspree.io/mbjavdke",
+        data: new FormData(form),
+      })
+        .then((r) => {
+          handleServerResponse(true, "Thanks!", form);
+        })
+        .catch((r) => {
+          handleServerResponse(false, r.response.data.error, form);
+        });
     }
-    console.log(false);
   };
 
   return (
-    <form className={classes.root} autoComplete="on">
+    <form className={classes.root} autoComplete="on" onSubmit={handleSubmit}>
       <TextField
         id="outlined-select-subject"
         select
+        name="subject"
         label="Betreff"
         value={subject}
         onChange={handleSubjectChange}
-        helperText="Bitte wählen Sie den Betreff aus"
+        helperText="Bitte wählen Sie den Betreff aus."
         defaultValue="Sonstiges"
         required
         variant="outlined"
@@ -123,7 +163,7 @@ export default function MForm() {
       </TextField>
       <TextField
         id="form-name"
-        label="Name"
+        label="Name (erforderlich)"
         type="text"
         name="name"
         onChange={handleNameChange}
@@ -134,13 +174,13 @@ export default function MForm() {
       />
       <TextField
         id="form-mail"
-        label="Email"
+        label="Email (erforderlich)"
         type="email"
         name="email"
         onChange={handleEmailChange}
-        error={email || (button && !email)}
+        error={!email && button}
         helperText={
-          email || (button && !email)
+          !email && button
             ? "Diese Angabe ist notwendig und aktuell ungültig."
             : ""
         }
@@ -158,29 +198,29 @@ export default function MForm() {
       <TextField
         id="form-message"
         label="Nachricht"
+        name="message"
         multiline
         rows={4}
         variant="outlined"
       />
       <div className={classes.buttonRow}>
-        <FormControl
-          required
-          error={button && !checkbox}
-          component="fieldset"
-          // className={classes.formControl}
-        >
+        <FormControl required error={button && !checkbox} component="fieldset">
           <FormGroup>
             <FormControlLabel
               control={
                 <Checkbox
+                  required
                   checked={checkbox}
                   onChange={handleCheckboxChange}
                   name="checkbox"
                   color={button && !checkbox ? "secondary" : "primary"}
-                  style={button && !checkbox ? { color: "red" } : {}}
+                  style={{
+                    color: button && !checkbox ? "red" : "auto",
+                    paddingBottom: isMobile ? 20 : "auto",
+                  }}
                 />
               }
-              label="Hiermit stimme ich der Übermittlung meiner Daten zu."
+              label="Ich stimme ich der Übermittlung meiner Daten zu."
             />
           </FormGroup>
           <FormHelperText>
@@ -189,7 +229,14 @@ export default function MForm() {
               : ""}
           </FormHelperText>
         </FormControl>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
+        <Button
+          type="submit"
+          value="Submit"
+          variant="contained"
+          color="primary"
+          disabled={serverState.submitting}
+          className={classes.button}
+        >
           Abschicken
         </Button>
       </div>
