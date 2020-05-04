@@ -18,8 +18,14 @@ const useStyles = makeStyles((theme: Theme) =>
       background: myTheme.cards.lightGrey.backgroundColor,
       ...myTheme.cards.lightGrey,
     },
-    title: { ...(myTheme.titleText as any) },
-    icon: { ...(myTheme.titleIcon as any) },
+    title: {
+      ...(myTheme.titleText as any),
+    },
+    icon: {
+      ...(myTheme.titleIcon as any),
+      marginLeft: isMobile ? "auto" : 0,
+      marginRight: isMobile ? "auto" : 0,
+    },
     body: {
       paddingTop: 12,
       fontFamily: myTheme.title.fontFamily,

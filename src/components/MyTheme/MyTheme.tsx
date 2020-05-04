@@ -91,7 +91,7 @@ const myTheme = {
     padding: 0,
   },
   titleIcon: {
-    display: isMobile ? "flex" : "block",
+    display: isMobile ? "block" : "flex",
     fontSize: isMobile ? "4rem" : "7rem",
     alignSelf: "flex-start",
     objectFit: "contain",

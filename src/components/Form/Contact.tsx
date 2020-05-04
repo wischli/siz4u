@@ -41,16 +41,16 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const subjects = [
   {
+    value: "Sonstiges",
+    label: "Sonstiges",
+  },
+  {
     value: "Edelmetalle",
     label: "Edelmetalle",
   },
   {
     value: "Alarmanlagen",
     label: "Alarmanlagen",
-  },
-  {
-    value: "Sonstiges",
-    label: "Sonstiges",
   },
 ];
 

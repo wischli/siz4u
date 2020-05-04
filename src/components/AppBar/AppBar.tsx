@@ -12,16 +12,22 @@ import { isMobile } from "react-device-detect";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
+      flexGrow: 0,
+    },
+    toolbar: {
+      width: isMobile ? "96%" : "100%",
+      maxWidth: 1100,
+      margin: isMobile ? 0 : "auto",
+      padding: 0,
     },
     bar: {
       backgroundColor: myTheme.primaryColor,
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginLeft: isMobile ? 0 : theme.spacing(2),
     },
     phoneButton: {
-      marginLeft: theme.spacing(2),
+      marginRight: isMobile ? 0 : theme.spacing(4),
       display: "flex",
       flexDirection: "column",
       justifyContent: "spa",
@@ -43,7 +49,7 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.bar}>
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
             className={classes.menuButton}
