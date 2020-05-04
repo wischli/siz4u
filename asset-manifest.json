@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/siz4u/static/css/main.64771185.chunk.css",
-    "main.js": "/siz4u/static/js/main.56fe7bc2.chunk.js",
-    "main.js.map": "/siz4u/static/js/main.56fe7bc2.chunk.js.map",
+    "main.js": "/siz4u/static/js/main.d5402456.chunk.js",
+    "main.js.map": "/siz4u/static/js/main.d5402456.chunk.js.map",
     "runtime-main.js": "/siz4u/static/js/runtime-main.2f981498.js",
     "runtime-main.js.map": "/siz4u/static/js/runtime-main.2f981498.js.map",
     "static/js/2.184afd0c.chunk.js": "/siz4u/static/js/2.184afd0c.chunk.js",
     "static/js/2.184afd0c.chunk.js.map": "/siz4u/static/js/2.184afd0c.chunk.js.map",
     "index.html": "/siz4u/index.html",
-    "precache-manifest.ef116062113ea0c8bc4eaa467e459395.js": "/siz4u/precache-manifest.ef116062113ea0c8bc4eaa467e459395.js",
+    "precache-manifest.a64f6dd31d9b9855b3a78e315ed5b75b.js": "/siz4u/precache-manifest.a64f6dd31d9b9855b3a78e315ed5b75b.js",
     "service-worker.js": "/siz4u/service-worker.js",
     "static/css/main.64771185.chunk.css.map": "/siz4u/static/css/main.64771185.chunk.css.map",
     "static/js/2.184afd0c.chunk.js.LICENSE.txt": "/siz4u/static/js/2.184afd0c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2f981498.js",
     "static/js/2.184afd0c.chunk.js",
     "static/css/main.64771185.chunk.css",
-    "static/js/main.56fe7bc2.chunk.js"
+    "static/js/main.d5402456.chunk.js"
   ]
 }
