@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1c6d88fa616d19232a23fa9fbf3d88c3",
+    "revision": "40042a087390579a81d6e86fc046d9bc",
     "url": "/siz4u/index.html"
   },
   {
-    "revision": "dab9cb01caffd8153633",
+    "revision": "d710d198fa6b74c0f06a",
     "url": "/siz4u/static/css/main.64771185.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/siz4u/static/js/2.184afd0c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dab9cb01caffd8153633",
-    "url": "/siz4u/static/js/main.973912fc.chunk.js"
+    "revision": "d710d198fa6b74c0f06a",
+    "url": "/siz4u/static/js/main.56fe7bc2.chunk.js"
   },
   {
     "revision": "71656004981ee8bb5a4a",
