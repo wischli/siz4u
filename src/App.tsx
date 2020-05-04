@@ -1,11 +1,9 @@
-import React, { createRef } from "react";
+import React from "react";
 import "./App.css";
-import "./components/AppBar/AppBar.styling.css";
 import "./cards.css";
 import "./global.css";
 import AppBar from "./components/AppBar/AppBar";
 import Welcome from "./components/welcome/Welcome";
-// import ContactMe from './components/contact/ContactMe'
 import Datenschutz from "./components/privacy/Datenschutz";
 import MForm from "./components/Form/Contact";
 import Security from "./components/Services/Security";

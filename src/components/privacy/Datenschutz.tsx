@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { Container, Theme, createStyles, Typography } from "@material-ui/core";
 import myTheme from "../MyTheme/MyTheme";
-import { isMobile } from "react-device-detect";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
