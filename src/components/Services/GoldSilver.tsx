@@ -12,7 +12,6 @@ import { isMobile } from "react-device-detect";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      marginTop: myTheme.appBar.height,
       width: "100%",
       padding: 20,
       textAlign: "left",
@@ -30,6 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       maxWidth: "100%",
+      minWidth: "100%",
       width: 800,
       marginTop: theme.spacing(0.5),
       marginBottom: theme.spacing(0.5),
@@ -60,21 +60,51 @@ export default function SimpleCard() {
   return (
     <Container className={classes.root}>
       <Container className={classes.title}>
+        <TimelineIcon className={classes.icon} />
         <Typography
           variant="h3"
           style={{ ...myTheme.title }}
           component="h3"
-          id="willkommen"
+          id="edelmetalle"
         >
-          <b>S</b>icherheit <b>I</b>n <b>Z</b>ukunft{" "}
+          Sicherheit durch Edelmetalle wie Gold oder Silber{" "}
         </Typography>
       </Container>
       <Typography className={classes.body} variant="body1">
-        <b>Seit über 30 Jahren ist Ihre Sicherheit in der Zukunft mein Job.</b>{" "}
+        <b>
+          Als zertifizierter Mitarbeiter der Multi-Invest Sachwerte GmbH berate
+          ich Sie rund um das Thema "Edelmetalle als Geldanlage".
+        </b>{" "}
         <br></br>
         <br></br>
-        Hier muss noch Text herein.
+        Edelmetalle wie Gold oder Silber gelten besonders in Krisenzeiten schon
+        seit Jahrhunderten als sichere und inflationsgeschützte Anlage. sich
+        noch!". Dies spigelt sich unter anderem darin wieder, dass der Goldkurs
+        zwischen Mai 2019 und Mai 2020 um 33% angestiegen ist (
+        <a href="https://www.finanzen.net/rohstoffe/goldpreis" rel="nofollow">
+          Quelle
+        </a>
+        ).
+        <Container className={classes.quoteBlock}>
+          <Typography className={classes.quoteHeadline} variant="h5">
+            {" "}
+            "Megatrend Gold: Einsteigen lohnt sich noch!"
+          </Typography>
+          <Typography className={classes.quoteUrl} variant="caption">
+            - Focus-Money Oktober 2019{" "}
+          </Typography>
+        </Container>
       </Typography>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        onClick={() => {
+          window.location.href = "#kontakt";
+        }}
+      >
+        Erfahren Sie mehr
+      </Button>
     </Container>
   );
 }

@@ -5,9 +5,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import PhoneIcon from "@material-ui/icons/Phone";
 import myTheme from "../MyTheme/MyTheme";
+import MyMenu from "./MyMenu";
+import { isMobile } from "react-device-detect";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,6 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     phoneButton: {
       marginLeft: theme.spacing(2),
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "spa",
     },
     title: {
       flexGrow: 1,
@@ -29,9 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textTransform: "uppercase",
       fontWeight: "bold",
       letterSpacing: 2,
-    },
-    tel: {
-      color: `${myTheme.secondaryColor} !important`,
+      textAlign: "center",
     },
   })
 );
@@ -49,20 +51,32 @@ export default function ButtonAppBar() {
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
+            <MyMenu />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h5" className={classes.title}>
             Siz4u
           </Typography>
-          <a href="tel:+491635622166" className={classes.tel}>
-            <IconButton
-              edge="end"
-              className={classes.phoneButton}
-              color="inherit"
-            >
-              <PhoneIcon></PhoneIcon>
-            </IconButton>
-          </a>
+          <IconButton
+            edge="end"
+            className={classes.phoneButton}
+            color="inherit"
+            onClick={() => {
+              window.location.href = "tel:+491635622166";
+            }}
+          >
+            <PhoneIcon style={{ alignSelf: "start" }}></PhoneIcon>{" "}
+            {!isMobile ? (
+              <Typography
+                variant="subtitle2"
+                className={classes.title}
+                style={{ paddingLeft: 20 }}
+              >
+                0163 5622166
+              </Typography>
+            ) : (
+              ""
+            )}
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
