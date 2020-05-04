@@ -88,13 +88,11 @@ export default function SimpleCard() {
           Sicherheit für Ihr Eigentum mit einer Alarmanlage von Eimsig{" "}
         </Typography>
       </Container>
+      <Typography className={classes.body} variant="h5">
+        Von Besichtigung über Beratung zur Installion - Ich wickle den gesamten
+        Prozess für Sie ab.
+      </Typography>
       <Typography className={classes.body} variant="body1">
-        <b>
-          Von Besichtigung über Beratung zur Installion - Ich wickle den
-          gesamten Prozess für Sie ab.
-        </b>{" "}
-        <br></br>
-        <br></br>
         In Deutschland passieren etwa 100.000 Wohnungseinbrüche pro Jahr (
         <a
           href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2018/InteraktiveKarten/07Wohnungseinbruchdiebstahl/07_Wohnungseinbruchdiebstahl_node.html"

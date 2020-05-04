@@ -66,10 +66,10 @@ export default function SimpleCard() {
           <b>S</b>icherheit <b>I</b>n <b>Z</b>ukunft{" "}
         </Typography>
       </Container>
+      <Typography className={classes.body} variant="h5">
+        Seit über 30 Jahren ist Ihre Sicherheit in der Zukunft mein Job.
+      </Typography>
       <Typography className={classes.body} variant="body1">
-        <b>Seit über 30 Jahren ist Ihre Sicherheit in der Zukunft mein Job.</b>{" "}
-        <br></br>
-        <br></br>
         Hier muss noch Text herein.
       </Typography>
     </Container>

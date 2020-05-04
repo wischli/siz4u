@@ -23,8 +23,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     icon: {
       ...(myTheme.titleIcon as any),
-      marginLeft: isMobile ? "auto" : 0,
-      marginRight: isMobile ? "auto" : 0,
     },
     body: {
       paddingTop: 12,
@@ -76,13 +74,11 @@ export default function SimpleCard() {
           Sicherheit durch Edelmetalle wie Gold oder Silber{" "}
         </Typography>
       </Container>
+      <Typography className={classes.body} variant="h5">
+        Als zertifizierter Mitarbeiter der Multi-Invest Sachwerte GmbH berate
+        ich Sie rund um das Thema "Edelmetalle als Geldanlage".
+      </Typography>
       <Typography className={classes.body} variant="body1">
-        <b>
-          Als zertifizierter Mitarbeiter der Multi-Invest Sachwerte GmbH berate
-          ich Sie rund um das Thema "Edelmetalle als Geldanlage".
-        </b>{" "}
-        <br></br>
-        <br></br>
         Edelmetalle wie Gold oder Silber gelten besonders in Krisenzeiten schon
         seit Jahrhunderten als sichere und inflationsgeschützte Anlage. sich
         noch!". Dies spigelt sich unter anderem darin wieder, dass der Goldkurs

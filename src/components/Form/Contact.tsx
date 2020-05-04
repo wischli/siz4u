@@ -183,11 +183,16 @@ export default function MForm() {
       <Container className={classes.title}>
         <Typography
           variant="h3"
-          style={{ ...myTheme.title, textAlign: "center" }}
+          style={{ ...myTheme.title, textAlign: "center", marginBottom: 20 }}
           component="h3"
           id="kontakt"
         >
-          Beratung erhalten{" "}
+          Beratung erhalten
+        </Typography>
+        <Typography variant="body1" style={{ textAlign: "left" }}>
+          Selbstverständlich werden Ihre Daten an niemanden weitergegeben. Sie
+          werden ausschließlich zur Kontaktaufnahme mit mir, André Wischlinsky,
+          verwendet.
         </Typography>
       </Container>
       <form className={classes.form} autoComplete="on" onSubmit={handleSubmit}>
