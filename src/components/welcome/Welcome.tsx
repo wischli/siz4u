@@ -57,20 +57,16 @@ export default function SimpleCard() {
   return (
     <Container className={classes.root}>
       <Container className={classes.title}>
-        <Typography
-          variant="h3"
-          style={{ ...myTheme.title }}
-          component="h3"
-          id="willkommen"
-        >
+        <Typography variant="h3" style={{ ...myTheme.title }} component="h3" id="willkommen">
           <b>S</b>icherheit <b>I</b>n <b>Z</b>ukunft{" "}
         </Typography>
       </Container>
       <Typography className={classes.body} variant="h5">
-        Seit über 30 Jahren ist Ihre Sicherheit in der Zukunft mein Job.
+        Mein Name ist André Wischlinsky und seit über 30 Jahren ist Ihre Sicherheit in der Zukunft mein Job.
       </Typography>
       <Typography className={classes.body} variant="body1">
-        Hier muss noch Text herein.
+        Egal ob Privatkunde, Klein- oder Großunternehmen - gerne berate ich Sie zu den Themen Alarmanlagen, Edelmetalle
+        und andere Optionen der Altersvorsorge. Ich würde mich sehr über ein Kennenlernen mit Ihnen freuen!
       </Typography>
     </Container>
   );
