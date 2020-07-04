@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/siz4u/static/css/main.64771185.chunk.css",
-    "main.js": "/siz4u/static/js/main.f54bb732.chunk.js",
-    "main.js.map": "/siz4u/static/js/main.f54bb732.chunk.js.map",
+    "main.js": "/siz4u/static/js/main.eaef6d00.chunk.js",
+    "main.js.map": "/siz4u/static/js/main.eaef6d00.chunk.js.map",
     "runtime-main.js": "/siz4u/static/js/runtime-main.2f981498.js",
     "runtime-main.js.map": "/siz4u/static/js/runtime-main.2f981498.js.map",
-    "static/js/2.184afd0c.chunk.js": "/siz4u/static/js/2.184afd0c.chunk.js",
-    "static/js/2.184afd0c.chunk.js.map": "/siz4u/static/js/2.184afd0c.chunk.js.map",
+    "static/js/2.e029c9fb.chunk.js": "/siz4u/static/js/2.e029c9fb.chunk.js",
+    "static/js/2.e029c9fb.chunk.js.map": "/siz4u/static/js/2.e029c9fb.chunk.js.map",
     "index.html": "/siz4u/index.html",
-    "precache-manifest.00518ef9d9b8fd35825f105f2f044128.js": "/siz4u/precache-manifest.00518ef9d9b8fd35825f105f2f044128.js",
+    "precache-manifest.30e11cedf000f070beb2cbf41cce30d0.js": "/siz4u/precache-manifest.30e11cedf000f070beb2cbf41cce30d0.js",
     "service-worker.js": "/siz4u/service-worker.js",
     "static/css/main.64771185.chunk.css.map": "/siz4u/static/css/main.64771185.chunk.css.map",
-    "static/js/2.184afd0c.chunk.js.LICENSE.txt": "/siz4u/static/js/2.184afd0c.chunk.js.LICENSE.txt"
+    "static/js/2.e029c9fb.chunk.js.LICENSE.txt": "/siz4u/static/js/2.e029c9fb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2f981498.js",
-    "static/js/2.184afd0c.chunk.js",
+    "static/js/2.e029c9fb.chunk.js",
     "static/css/main.64771185.chunk.css",
-    "static/js/main.f54bb732.chunk.js"
+    "static/js/main.eaef6d00.chunk.js"
   ]
 }
