@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: "100%",
-      padding: 20,
       textAlign: "left",
       ...myTheme.cards.white,
     },
@@ -79,18 +78,12 @@ export default function SimpleCard() {
     <Container className={classes.root} innerRef={myRef}>
       <Container className={classes.title}>
         <HouseIcon className={classes.icon} />
-        <Typography
-          variant="h3"
-          style={{ ...myTheme.title }}
-          component="h3"
-          id="alarmanlagen"
-        >
+        <Typography variant="h3" style={{ ...myTheme.title }} component="h3" id="alarmanlagen">
           Sicherheit für Ihr Eigentum mit einer Alarmanlage von Eimsig{" "}
         </Typography>
       </Container>
       <Typography className={classes.body} variant="h5">
-        Von Besichtigung über Beratung zur Installion - Ich wickle den gesamten
-        Prozess für Sie ab.
+        Von Besichtigung über Beratung zur Installion - Ich wickle den gesamten Prozess für Sie ab.
       </Typography>
       <Typography className={classes.body} variant="body1">
         In Deutschland passieren etwa 100.000 Wohnungseinbrüche pro Jahr (
@@ -100,17 +93,14 @@ export default function SimpleCard() {
         >
           Statistik vom BKA für 2018
         </a>
-        ). Gehen Sie sicher, dass Sie zukünftig nicht dazu gehören - Sichern Sie
-        Ihr Eigentum ab mit einer Alarmanlage von Eimsig!
+        ). Gehen Sie sicher, dass Sie zukünftig nicht dazu gehören - Sichern Sie Ihr Eigentum ab mit einer Alarmanlage
+        von Eimsig!
       </Typography>
       <Container className={classes.features}>
         {" "}
         {features.map((feature) => (
           <Container className={classes.feature}>
-            <VerifiedUserIcon
-              className={classes.featureIcon}
-              color="primary"
-            ></VerifiedUserIcon>
+            <VerifiedUserIcon className={classes.featureIcon} color="primary"></VerifiedUserIcon>
             <Typography className={classes.featureText}>{feature}</Typography>
           </Container>
         ))}

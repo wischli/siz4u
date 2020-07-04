@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       marginTop: myTheme.appBar.height,
       width: "100%",
-      padding: 20,
       textAlign: "left",
       background: myTheme.cards.lightGrey.backgroundColor,
       ...myTheme.cards.lightGrey,

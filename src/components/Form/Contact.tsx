@@ -58,7 +58,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: "100%",
-      padding: 20,
       textAlign: "left",
       ...myTheme.cards.white,
       color: theme.palette.common.black,
@@ -146,9 +145,7 @@ export default function MForm() {
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckbox(event.target.checked);
   };
-  const handleEmailChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleEmailChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     event.persist();
     await sleep(1000);
     setEmail(
@@ -190,9 +187,8 @@ export default function MForm() {
           Beratung erhalten
         </Typography>
         <Typography variant="body1" style={{ textAlign: "left" }}>
-          Selbstverständlich werden Ihre Daten an niemanden weitergegeben. Sie
-          werden ausschließlich zur Kontaktaufnahme mit mir, André Wischlinsky,
-          verwendet.
+          Selbstverständlich werden Ihre Daten an niemanden weitergegeben. Sie werden ausschließlich zur Kontaktaufnahme
+          mit mir, André Wischlinsky, verwendet.
         </Typography>
       </Container>
       <form className={classes.form} autoComplete="on" onSubmit={handleSubmit}>
@@ -211,11 +207,7 @@ export default function MForm() {
           variant="outlined"
         >
           {subjects.map((option) => (
-            <MenuItem
-              key={option.value}
-              value={option.value}
-              className={classes.options}
-            >
+            <MenuItem key={option.value} value={option.value} className={classes.options}>
               {option.label}
             </MenuItem>
           ))}
@@ -238,11 +230,7 @@ export default function MForm() {
           name="email"
           onChange={handleEmailChange}
           error={!email && button}
-          helperText={
-            !email && button
-              ? "Diese Angabe ist notwendig und aktuell ungültig."
-              : ""
-          }
+          helperText={!email && button ? "Diese Angabe ist notwendig und aktuell ungültig." : ""}
           variant="outlined"
           required
         />
@@ -264,11 +252,7 @@ export default function MForm() {
           variant="outlined"
         />
         <div className={classes.buttonRow}>
-          <FormControl
-            required
-            error={button && !checkbox}
-            component="fieldset"
-          >
+          <FormControl required error={button && !checkbox} component="fieldset">
             <FormGroup>
               <FormControlLabel
                 control={
@@ -288,9 +272,7 @@ export default function MForm() {
               />
             </FormGroup>
             <FormHelperText>
-              {button && !checkbox
-                ? "Bitte stimmen Sie der Zusendung Ihrer Daten zu."
-                : ""}
+              {button && !checkbox ? "Bitte stimmen Sie der Zusendung Ihrer Daten zu." : ""}
             </FormHelperText>
           </FormControl>
           <Button
@@ -305,19 +287,13 @@ export default function MForm() {
           </Button>
         </div>
       </form>
-      <Snackbar
-        open={alert !== "none"}
-        autoHideDuration={6000}
-        onClose={() => handleAlert("none")}
-      >
+      <Snackbar open={alert !== "none"} autoHideDuration={6000} onClose={() => handleAlert("none")}>
         <Alert
           className={classes.alert}
           severity={alert as any}
           style={{ display: alert !== "none" ? "block" : "none" }}
         >
-          {alert === "success"
-            ? "Vielen Dank, ihre Anfrage wurde verschickt!"
-            : "Etwas ist schiefgelaufen!"}
+          {alert === "success" ? "Vielen Dank, ihre Anfrage wurde verschickt!" : "Etwas ist schiefgelaufen!"}
         </Alert>
       </Snackbar>
     </Container>

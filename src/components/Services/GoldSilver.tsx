@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: "100%",
-      padding: 20,
       textAlign: "left",
       background: myTheme.cards.lightGrey.backgroundColor,
       ...myTheme.cards.lightGrey,
@@ -65,23 +64,17 @@ export default function SimpleCard() {
     <Container className={classes.root}>
       <Container className={classes.title}>
         <TimelineIcon className={classes.icon} />
-        <Typography
-          variant="h3"
-          style={{ ...myTheme.title }}
-          component="h3"
-          id="edelmetalle"
-        >
+        <Typography variant="h3" style={{ ...myTheme.title }} component="h3" id="edelmetalle">
           Sicherheit durch Edelmetalle wie Gold oder Silber{" "}
         </Typography>
       </Container>
       <Typography className={classes.body} variant="h5">
-        Als zertifizierter Mitarbeiter der Multi-Invest Sachwerte GmbH berate
-        ich Sie rund um das Thema "Edelmetalle als Geldanlage".
+        Als zertifizierter Mitarbeiter der Multi-Invest Sachwerte GmbH berate ich Sie rund um das Thema "Edelmetalle als
+        Geldanlage".
       </Typography>
       <Typography className={classes.body} variant="body1">
-        Edelmetalle wie Gold oder Silber gelten besonders in Krisenzeiten schon
-        seit Jahrhunderten als sichere und inflationsgeschützte Anlage. sich
-        noch!". Dies spigelt sich unter anderem darin wieder, dass der Goldkurs
+        Edelmetalle wie Gold oder Silber gelten besonders in Krisenzeiten schon seit Jahrhunderten als sichere und
+        inflationsgeschützte Anlage. sich noch!". Dies spigelt sich unter anderem darin wieder, dass der Goldkurs
         zwischen Mai 2019 und Mai 2020 um 33% angestiegen ist (
         <a href="https://www.finanzen.net/rohstoffe/goldpreis" rel="nofollow">
           Quelle
