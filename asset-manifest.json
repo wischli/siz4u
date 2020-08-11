@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/siz4u/static/css/main.64771185.chunk.css",
-    "main.js": "/siz4u/static/js/main.eaef6d00.chunk.js",
-    "main.js.map": "/siz4u/static/js/main.eaef6d00.chunk.js.map",
-    "runtime-main.js": "/siz4u/static/js/runtime-main.2f981498.js",
-    "runtime-main.js.map": "/siz4u/static/js/runtime-main.2f981498.js.map",
-    "static/js/2.e029c9fb.chunk.js": "/siz4u/static/js/2.e029c9fb.chunk.js",
-    "static/js/2.e029c9fb.chunk.js.map": "/siz4u/static/js/2.e029c9fb.chunk.js.map",
-    "index.html": "/siz4u/index.html",
-    "precache-manifest.30e11cedf000f070beb2cbf41cce30d0.js": "/siz4u/precache-manifest.30e11cedf000f070beb2cbf41cce30d0.js",
-    "service-worker.js": "/siz4u/service-worker.js",
-    "static/css/main.64771185.chunk.css.map": "/siz4u/static/css/main.64771185.chunk.css.map",
-    "static/js/2.e029c9fb.chunk.js.LICENSE.txt": "/siz4u/static/js/2.e029c9fb.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.64771185.chunk.css",
+    "main.js": "/static/js/main.ef31583e.chunk.js",
+    "main.js.map": "/static/js/main.ef31583e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d8a492b1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d8a492b1.js.map",
+    "static/js/2.e029c9fb.chunk.js": "/static/js/2.e029c9fb.chunk.js",
+    "static/js/2.e029c9fb.chunk.js.map": "/static/js/2.e029c9fb.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.16a8054b890521dc0b2c9b4da032948c.js": "/precache-manifest.16a8054b890521dc0b2c9b4da032948c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.64771185.chunk.css.map": "/static/css/main.64771185.chunk.css.map",
+    "static/js/2.e029c9fb.chunk.js.LICENSE.txt": "/static/js/2.e029c9fb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2f981498.js",
+    "static/js/runtime-main.d8a492b1.js",
     "static/js/2.e029c9fb.chunk.js",
     "static/css/main.64771185.chunk.css",
-    "static/js/main.eaef6d00.chunk.js"
+    "static/js/main.ef31583e.chunk.js"
   ]
 }
