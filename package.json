@@ -2,7 +2,7 @@
   "name": "siz4u",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://wischli.github.io/siz4u",
+  "homepage": "https://siz4u.de",
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",
