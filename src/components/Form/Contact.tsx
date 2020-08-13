@@ -163,7 +163,7 @@ export default function MForm() {
       setServerState({ submitting: true, status: null });
       axios({
         method: "post",
-        url: "https://formspree.io/mbjavdke",
+        url: "https://formspree.io/mrgydynv",
         data: new FormData(form),
       })
         .then((r) => {

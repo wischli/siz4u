@@ -61,7 +61,7 @@ export default function SimpleCard() {
           <br />
           12623 Berlin
           <p>
-            Oder per E-Mail an <a href="mailto:andre.wischlinsky@gmx.de">andre.wischlinsky@gmx.de</a>
+            Oder per E-Mail an <a href="mailto:info@siz4u.de">info@siz4u.de</a>
           </p>
         </Typography>
       </Container>
