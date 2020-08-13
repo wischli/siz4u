@@ -50,12 +50,7 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.bar}>
         <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MyMenu />
           </IconButton>
           <Typography variant="h5" className={classes.title}>
@@ -71,12 +66,8 @@ export default function ButtonAppBar() {
           >
             <PhoneIcon style={{ alignSelf: "start" }}></PhoneIcon>{" "}
             {!isMobile ? (
-              <Typography
-                variant="subtitle2"
-                className={classes.title}
-                style={{ paddingLeft: 20 }}
-              >
-                0163 5622166
+              <Typography variant="subtitle2" className={classes.title} style={{ paddingLeft: 20 }}>
+                +49 163 5622166
               </Typography>
             ) : (
               ""
