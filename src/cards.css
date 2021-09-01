@@ -200,3 +200,7 @@ h3 {
   /* padding: 5px;
   margin-right: 10px; */
 }
+
+.MuiOutlinedInput-input {
+  color: black !important;
+}
