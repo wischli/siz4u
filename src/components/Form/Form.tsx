@@ -20,17 +20,17 @@ function MyForm() {
     const form = e.target;
     setServerState({ submitting: true, status: null });
     console.log(new FormData(form).getAll("name"));
-    // axios({
-    //   method: "post",
-    //   url: "https://formspree.io/mbjavdke",
-    //   data: new FormData(form),
-    // })
-    //   .then((r) => {
-    //     handleServerResponse(true, "Thanks!", form);
-    //   })
-    //   .catch((r) => {
-    //     handleServerResponse(false, r.response.data.error, form);
-    //   });
+    axios({
+      method: "post",
+      url: "https://formspree.io/f/mrgydynv",
+      data: new FormData(form),
+    })
+      .then((r) => {
+        handleServerResponse(true, "Thanks!", form);
+      })
+      .catch((r) => {
+        handleServerResponse(false, r.response.data.error, form);
+      });
   };
   return (
     <div style={{ display: "flex" }}>
@@ -48,9 +48,7 @@ function MyForm() {
           Submit
         </button>
         {serverState.status && (
-          <p className={!(serverState.status as any).ok ? "errorMsg" : ""}>
-            {(serverState.status as any).msg}
-          </p>
+          <p className={!(serverState.status as any).ok ? "errorMsg" : ""}>{(serverState.status as any).msg}</p>
         )}
       </form>
     </div>
