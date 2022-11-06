@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import myTheme from "../MyTheme/MyTheme";
 import { isMobile } from "react-device-detect";
+// @ts-ignore
+import eimsigPdf from "../../static/siz4u-eimsig.pdf";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -93,8 +95,11 @@ export default function SimpleCard() {
         >
           Statistik vom BKA für 2018
         </a>
-        ). Gehen Sie sicher, dass Sie zukünftig nicht dazu gehören - Sichern Sie Ihr Eigentum ab mit einer Alarmanlage
-        von Eimsig!
+        ). Gehen Sie sicher, dass Sie zukünftig nicht dazu gehören - Sichern Sie Ihr Eigentum ab mit einer{" "}
+        <a href="https://www.eimsig.de/?gclid=CO2Qz-eQ-csCFVTnGwod9kwLEw" target="_blank" rel="noopener noreferrer">
+          Alarmanlage von Eimsig
+        </a>{" "}
+        !
       </Typography>
       <Container className={classes.features}>
         {" "}
@@ -105,16 +110,30 @@ export default function SimpleCard() {
           </Container>
         ))}
       </Container>
-      <Button
-        variant="contained"
-        color="primary"
-        className={classes.button}
-        onClick={() => {
-          window.location.href = "#kontakt";
-        }}
-      >
-        Erfahren Sie mehr
-      </Button>
+      <Container>
+        <Button variant="contained" color="secondary" className={classes.button}>
+          <a
+            href="https://www.eimsig.de/?gclid=CO2Qz-eQ-csCFVTnGwod9kwLEw"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", background: "none" }}
+          >
+            Mehr über Alarmanlagen von Eimsig
+          </a>
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          className={classes.button}
+          onClick={() => {
+            window.location.href = "#kontakt";
+          }}
+        >
+          <a href={eimsigPdf} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+            Lassen Sie sich beraten
+          </a>
+        </Button>
+      </Container>
     </Container>
   );
 }
