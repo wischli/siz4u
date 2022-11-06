@@ -120,19 +120,24 @@ export default function SimpleCard() {
           >
             <span role="img" aria-label="left-pointing finger">
               👉
-            </span>
+            </span>{" "}
             Mehr Informationen zu Eimsig{" "}
             <span role="img" aria-label="right-pointing finger">
               👈
             </span>
           </a>
         </Button>
-        <Button variant="contained" color="secondary" className={classes.button}>
+        <Button
+          variant="contained"
+          color="secondary"
+          className={classes.button}
+          style={{ marginTop: 17, marginBottom: 17 }}
+        >
           <a href={eimsigPdf} style={{ textDecoration: "none", background: "none" }}>
             <span role="img" aria-label="left-pointing finger">
               👉
-            </span>
-            Zur Exklusiven SiZ4u.de Broschüre
+            </span>{" "}
+            Zur Exklusiven SiZ4u.de Broschüre{" "}
             <span role="img" aria-label="right-pointing finger">
               👈
             </span>
