@@ -118,7 +118,24 @@ export default function SimpleCard() {
             rel="noopener noreferrer"
             style={{ textDecoration: "none", background: "none" }}
           >
-            Mehr über Alarmanlagen von Eimsig
+            <span role="img" aria-label="left-pointing finger">
+              👉
+            </span>
+            Mehr Informationen zu Eimsig{" "}
+            <span role="img" aria-label="right-pointing finger">
+              👈
+            </span>
+          </a>
+        </Button>
+        <Button variant="contained" color="secondary" className={classes.button}>
+          <a href={eimsigPdf} style={{ textDecoration: "none", background: "none" }}>
+            <span role="img" aria-label="left-pointing finger">
+              👉
+            </span>
+            Zur Exklusiven SiZ4u.de Broschüre
+            <span role="img" aria-label="right-pointing finger">
+              👈
+            </span>
           </a>
         </Button>
         <Button
@@ -129,9 +146,7 @@ export default function SimpleCard() {
             window.location.href = "#kontakt";
           }}
         >
-          <a href={eimsigPdf} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-            Lassen Sie sich beraten
-          </a>
+          Lassen Sie sich beraten
         </Button>
       </Container>
     </Container>
